@@ -1,0 +1,30 @@
+.home {
+  background: $mainColor;
+  color: white;
+
+  @include mobile-medium {
+    display: block;
+    position: relative;
+    padding-top: 50px;
+
+  }
+
+  .box-avatar {
+    margin-top: 180px;
+    @include mobile-medium {
+      margin-top: 10px;
+    }
+  }
+
+  .main-title {
+    @include mobile-medium {
+      margin-bottom: 10px;
+    }
+  }
+
+  .personal-messages-links {
+    margin-top: 80px;
+  }
+
+}
+

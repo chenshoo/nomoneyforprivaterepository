@@ -1,0 +1,40 @@
+.box-notification {
+  background: #C3F3D4;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  z-index: 9999;
+  font-weight: 600;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: $green-success;
+
+  &.danger {
+    background: $danger;
+    color: $white;
+  }
+
+  @include mobile-medium {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+  }
+}
+
+.box-modal-notification {
+
+  img {
+    width: 40px;
+  }
+
+  .box-text {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+}

@@ -1,0 +1,25 @@
+/node_modules
+npm-debug.log
+node_modules
+# IntelliJ
+*.iml
+/.idea
+
+/anigma/*
+
+/memes
+/meme-thumb
+
+memes/
+meme-thumb/
+
+/memes/
+/meme-thumb/
+
+/legacy/
+/legacy
+
+
+/storage.json
+/memeking-80290-firebase-adminsdk-tvh87-fcd47e07c4.js
+/client_secret_243226751545-3vh5vo8qol9u6pohutvcpn36rdkcf8d5.apps.googleusercontent.com.json

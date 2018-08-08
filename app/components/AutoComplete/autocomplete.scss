@@ -1,0 +1,14 @@
+@import './style/select.scss';
+@import 'style/components';
+
+.box-auto-complete {
+
+  &.is-focused {
+
+    .Select-control {
+      border-bottom: 3px solid $lightGray !important;
+
+    }
+
+  }
+}

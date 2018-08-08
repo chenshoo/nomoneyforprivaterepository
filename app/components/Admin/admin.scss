@@ -1,0 +1,50 @@
+.box-admin {
+
+  .dashboard {
+    @include mobile-medium {
+      flex-direction: column;
+      justify-content:center;
+    }
+  }
+
+  select {
+    height: 60px;
+    display:block;
+    margin: 0 4px;
+    color: black;
+    width: 100%;
+
+
+    @include mobile-medium {
+      border: 1px solid black;
+
+    }
+  }
+
+}
+
+
+.login-area {
+  align-self: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  input {
+    height: 50px;
+    width: 450px;
+
+    @include mobile-medium{
+      width: 300px;
+    }
+  }
+
+  .login-btn {
+    margin: 30px 0;
+  }
+
+
+
+}

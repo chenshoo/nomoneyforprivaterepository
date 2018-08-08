@@ -1,0 +1,94 @@
+$thirdColor : #3EB87F;
+
+
+html{
+  overflow-y: scroll;
+}
+
+body{
+  direction: rtl;
+  font-family: "Open Sans Hebrew" !important;
+  direction: rtl !important;
+  language: 'he';
+  overflow-x:hidden !important;
+  font-size:16px;
+  background : lighten(#d7d7d7, 16%);
+  min-height: 100vh;
+  background: $mainColor;
+
+
+}
+
+.cover{
+  background-color: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  z-index: 901;
+}
+
+.hebrew{
+  direction :rtl;
+}
+a:hover, a:active{
+  text-decoration : none !important;
+}
+//::selection {
+//  background: $mainColor;
+//}
+//::-moz-selection {
+//  background: $mainColor;
+//}
+
+.hide-desktop {
+  @include desktop {
+    display:none !important;
+  }
+}
+
+
+*:focus{
+  outline: 0 !important;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
+}
+
+
+
+.visible-mobile {
+  display: none;
+
+  @include mobile-medium {
+    display: block;
+  }
+}
+
+.visible-mobile-flex {
+  display: none;
+
+  @include mobile-medium {
+    display: flex;
+  }
+}
+
+.hidden-mobile {
+  @include mobile-medium {
+    display:none;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.block {
+  display: block;
+}

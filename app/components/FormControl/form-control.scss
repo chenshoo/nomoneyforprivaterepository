@@ -1,0 +1,68 @@
+@mixin focus($border, $box-shadow) {
+  &:focus,
+  &:active {
+    border: $border;
+    box-shadow: $box-shadow;
+  }
+}
+
+.box-form-control {
+
+  font-family: $openSansHebrew;
+
+  height: 50px;
+  text-align: right;
+  direction: rtl;
+  font-size: 16px;
+  resize: none;
+
+  &:focus,
+  &:active {
+    outline: 0 !important;
+    @include focus(2px solid $darkGray, none)
+
+  }
+
+  &.input-xl {
+    height: 80px;
+    font-size: 30px;
+
+    @include placeholder {
+      font-size: 30px;
+      line-height: 80px;;
+      font-family: $openSansHebrew;
+    }
+
+
+    @include mobile-medium {
+      @include placeholder {
+        font-size: 24px;
+        line-height: 50px;;
+        font-family: $openSansHebrew;
+      }
+    }
+
+
+
+  }
+
+  &.theme-bottom-flat {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    @include focus(1px solid gray, none)
+
+  }
+
+  &.theme-shadow {
+    border: none;
+    color: $mainColor;
+
+    @include placeholder {
+      color: $mainColor;
+    }
+
+    @include focus(none, $shadow-mid)
+
+  }
+
+}

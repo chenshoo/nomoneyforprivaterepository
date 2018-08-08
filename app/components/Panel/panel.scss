@@ -1,0 +1,13 @@
+.box-panel {
+
+  cursor: default;
+
+  &.theme-shadow {
+    box-shadow: $shadow-mid;
+    border: none;
+    &:hover {
+      background: $white;
+    }
+  }
+
+}

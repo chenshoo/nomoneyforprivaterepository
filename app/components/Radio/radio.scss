@@ -1,0 +1,30 @@
+.box-radio {
+
+  input {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 4px solid $white;
+    box-shadow: 0 0 0 1px $darkGray;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:checked {
+      background-color: $black;
+    }
+
+    &:focus,
+    &:active {
+      outline: none !important;
+    }
+  }
+
+  .radio-label {
+      margin-right: 25px;
+      color: black;
+  }
+}

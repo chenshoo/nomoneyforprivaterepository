@@ -1,0 +1,50 @@
+.box-user-message {
+
+  background: white;
+  align-items:center;
+  flex-direction: row-reverse;
+  border: 1px solid white;
+  padding: 15px;
+  margin: 10px auto;
+  min-height: 200px;
+  border-radius: 5px;
+
+  .inner-container {
+    @include mobile-medium {
+      display: flex;
+      flex-direction: column-reverse;
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  .section-title {
+    padding-bottom: 35px;
+    border-bottom: 1px solid #8d8d8d;
+  }
+
+  .area {
+    @include mobile-medium {
+      border-bottom: 1px solid #8d8d8d;
+      &:first-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.likes-container {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+
+  @include mobile-medium {
+    margin-top: 10px;
+  }
+
+  .counter {
+    color: $green-success;
+  }
+
+}

@@ -1,0 +1,8 @@
+.sign-up-container {
+
+  padding-top: 200px;
+
+  @include mobile-medium{
+    padding-top: 80px;
+  }
+}

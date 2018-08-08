@@ -1,0 +1,60 @@
+$closeColor: darkgray;
+
+.box-generator-modal {
+  position: fixed;
+  height: 96%;
+  width: 95%;
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+  top: 10px;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  box-shadow: 0px 0px 16px -2px rgba(0, 0, 0, 0.4);
+  z-index: 800;
+  overflow: scroll;
+  direction: ltr;
+  padding: 25px;
+  background: $main-bg;
+
+  @include mobile-medium {
+    border-radius: 0;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__close {
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 4rem;
+    color: $closeColor;
+    cursor: pointer;
+    z-index: 99999;
+
+    &.white {
+      color: white;
+    }
+
+    @include mobile-medium {
+      position: fixed;
+      top: 0;
+      right: -2px;
+      color: darken($closeColor, 8%);
+
+    }
+
+    &:hover {
+      color: darken($closeColor, 10%);
+      background: transparent;
+    }
+    &:active {
+      color: darken($closeColor, 20%)
+    }
+  }
+
+
+}

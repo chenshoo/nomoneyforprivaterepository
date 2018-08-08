@@ -1,0 +1,5 @@
+.search-container {
+  @include mobile-medium {
+    height: 100vh;
+  }
+}

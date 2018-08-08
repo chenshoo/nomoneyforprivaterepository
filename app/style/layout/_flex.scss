@@ -1,0 +1,21 @@
+.flex{
+  display:flex;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+.space-around{
+  justify-content: space-around;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.auto{
+  span{
+    width: auto !important;
+  }
+}

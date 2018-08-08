@@ -1,0 +1,210 @@
+.box-icon {
+
+
+
+  &.round {
+    color: $mainColor;
+    border :1px solid $mainColor;
+    height:30px;
+    width: 30px;
+    border-radius: 200px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+
+    &:hover {
+      background: $mainColor;
+      color: white;
+      cursor: pointer;
+    }
+
+    &:active {
+      background: darken($mainColor, 15%);
+    }
+
+  }
+
+  &.theme-main-brand {
+    color: $mainColor;
+
+    &:hover {
+      color: darken($mainColor, 5%);
+    }
+
+    &:active {
+      color: darken($mainColor, 10%);
+    }
+
+  }
+
+  &.theme-pink {
+    color: $pink;
+
+    &:hover {
+      color: darken($pink, 5%);
+    }
+
+    &:active {
+      color: darken($pink, 10%);
+    }
+
+  }
+
+  &.theme-pink-dark {
+    color: darken($pink, 20%);
+
+    &:hover {
+      color: darken($pink, 30%);
+    }
+
+    &:active {
+      color: darken($pink, 30%);
+    }
+
+  }
+
+  &.theme-brand {
+    color: lightblue;
+    border-color: lightblue;
+
+    &.active {
+      background: lightblue;
+      color: white;
+    }
+
+    &:hover {
+      background: lightblue;
+      color: white;
+      cursor: pointer;
+    }
+
+    &:active {
+      background: darken(lightblue, 15%);
+    }
+  }
+
+  &.theme-success-light {
+    color: $success-light;
+  }
+
+  &.theme-success {
+    color: $green-success;
+    border-color: $green-success;
+
+    &.active {
+      background: $green-success;
+      color: white;
+    }
+
+    &:hover {
+      background: $green-success;
+      color: white;
+      cursor: pointer;
+    }
+
+    &:active {
+      background: darken($green-success, 15%);
+    }
+  }
+
+  &.theme-danger {
+    color: $danger;
+    border-color: $danger;
+
+    &:hover {
+      background: $danger;
+      color: white;
+      cursor: pointer;
+    }
+
+    &:active {
+      background: darken($danger, 15%);
+    }
+  }
+
+  &.theme-gray-dark {
+    color: $gray-dark;
+    border-color: $gray-dark;
+
+    &:hover {
+      background: transparent;
+      color: white;
+      cursor: pointer;
+    }
+
+    &:active {
+      background: darken($gray-dark, 15%);
+    }
+  }
+
+  &.theme-gray-dark-no-hover {
+    color: $gray-dark;
+    border-color: $gray-dark;
+  }
+
+  &.theme-white {
+    color: white;
+    border-color: white;
+
+    &:hover {
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  &.theme-success {
+    color: lighten($green-success, 10%);
+
+    &:hover {
+      color: darken($green-success, 5%);
+    }
+
+    &:active {
+      color: darken($green-success, 10%);
+    }
+  }
+
+  &.theme-black {
+    color: black;
+    border-color: black;
+
+    &:hover {
+      color: black;
+      cursor: pointer;
+    }
+  }
+
+  &.theme-white-success {
+    color: $white;
+
+    &:hover {
+      color: lighten($green-success, 10%);
+    }
+
+    &:active {
+      color: lighten($green-success, 5%);
+    }
+  }
+
+  &.size-xs {
+    font-size: 10px;
+  }
+
+  &.size-xl {
+    font-size: 26px;
+
+    &.round {
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  &.size-xxl {
+    font-size: 38px;
+  }
+
+  &.size-super {
+    font-size: 100px;
+  }
+}

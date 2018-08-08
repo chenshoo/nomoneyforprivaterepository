@@ -1,0 +1,7 @@
+.app-container {
+  height: 100vh;
+  @include mobile-medium {
+    margin-top: 50px;
+    height: auto; 
+  }
+}

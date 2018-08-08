@@ -1,0 +1,62 @@
+.memes-section {
+  position: relative;
+  overflow-x: hidden;
+  justify-content:center;
+  align-items: center;
+  min-height: 100vh;
+  background: $black;
+
+  &.blur {
+    @include blur(7px);
+  }
+
+  .memes-container {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    margin-left: -8px; /* Adjustment for the gutter */
+    @include mobile-medium {
+      padding-left: 12px;
+    }
+
+    &.popular {
+      @include mobile-medium {
+        padding-top: 50px;
+      }
+    }
+
+  }
+
+  .box-round-empty-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+
+  .popular-tabs {
+
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    position: fixed;
+    z-index: 9998;
+
+    .popular-tab {
+      padding: 10px;
+      border-bottom: 3px solid $gray-mid;
+      width: 50%;
+      border-top: 1px solid $gray-mid;
+      background: $main-bg;
+
+      &:first-child {
+        border-left: 1px solid $gray-mid;
+      }
+
+      &.active {
+        border-bottom: 3px solid $mainColor
+      }
+    }
+  }
+
+}

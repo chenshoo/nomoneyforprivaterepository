@@ -1,0 +1,153 @@
+
+/************
+MIXINS
+************/
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 767px) {
+    @content;
+  }
+}
+
+@mixin desktop-small{
+  @media only screen and (min-width: 900px) and (max-width:1439px) {
+    @content;
+  }
+}
+
+@mixin mobile-and-tablet {
+  @media only screen and (min-width: 320px) and (max-width:1023px) {
+    @content;
+  }
+}
+
+@mixin mobile-medium {
+  @media only screen and (max-width: 939px) {
+    @content;
+  }
+}
+
+@mixin mobile-small{
+  @media only screen and (max-width: 370px) {
+    @content;
+  }
+}
+
+@mixin tablet{
+  @media (min-width: 768px) and (max-width: 990px) {
+   @content;
+  }
+}
+
+
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+  -moz-box-sizing: $box-model; // Firefox <= 19
+  box-sizing: $box-model;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+@mixin absolute-center{
+  position:absolute;
+  margin-right:auto;
+  margin-left:auto;
+  left:0;
+  right:0;
+}
+
+@mixin clearfix {
+  &:after,&:before {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    @content;
+  }
+
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin skeleton-animation($color:#8d8d8d ) {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, $color, lighten($color, 6%), $color);
+    animation: progress 1s ease-in-out infinite;
+  }
+
+
+  @keyframes progress {
+    0% {
+      transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+}
+
+
+@mixin blur($size : 7px) {
+  -webkit-filter: blur($size);
+  -moz-filter: blur($size);
+  -o-filter: blur($size);
+  -ms-filter: blur($size);
+  filter: blur($size);
+}

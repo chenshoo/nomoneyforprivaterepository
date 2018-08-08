@@ -1,0 +1,45 @@
+.box-avatar {
+
+  display: inline-block;
+  width:100px;
+  height: 100px;
+  border-radius: 100px;
+
+  &.block {
+    display:block;
+  }
+
+  &.center {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+  }
+
+  &.size-md {
+    @include mobile-medium {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &.size-sm {
+    width: 45px;
+    height: 45px;
+  }
+
+
+  &.size-xxs {
+    width: 40px;
+    height: 40px;
+  }
+
+
+
+  img {
+    width: 100%;
+    border-radius: 500px;
+    height: 100%;
+  }
+
+
+}

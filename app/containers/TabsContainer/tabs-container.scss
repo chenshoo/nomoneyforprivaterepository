@@ -1,0 +1,30 @@
+
+.box-tab {
+  small {
+    font-size: 10px;
+  }
+
+  &.active {
+    small {
+      color: $mainColor;
+    }
+  }
+
+}
+
+.tabs-container {
+  padding: 5px 3px;
+  display: flex;
+  position: fixed;
+  height: 50px;
+  top: 0;
+  z-index:9998;
+  left: 0;
+  right: 0;
+  width: 100%;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  background: $main-bg;
+  box-shadow: 4px 9px 11px -8px rgba(0, 0, 0, 0.4);
+
+}

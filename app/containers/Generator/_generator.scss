@@ -1,0 +1,29 @@
+
+.generator {
+
+  @include mobile-medium {
+    padding: 0 !important;
+  }
+
+  .generator__wrapper {
+
+    margin: 0 auto;
+    width: 80%;
+    padding: 15px;
+    border: 1px solid #8d8d8d;
+    border-radius: 5px;
+    display: flex;
+    direction: ltr;
+
+    @include mobile-medium {
+
+      flex-direction: column;
+      width: 100%;
+      border: none;
+      padding: 0;
+
+    }
+  }
+
+}
+

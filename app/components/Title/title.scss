@@ -1,0 +1,23 @@
+.box-title {
+
+  &.theme-white {
+    color: $white;
+  }
+
+  &.theme-black {
+    color: $black;
+  }
+
+  &.theme-gray-dark {
+    color: $gray-dark;
+  }
+
+  &.h3 {
+    line-height: 33px;
+    @include mobile-medium {
+      font-size:22px;
+    }
+
+
+  }
+}

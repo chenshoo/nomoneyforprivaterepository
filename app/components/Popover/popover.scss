@@ -1,0 +1,22 @@
+.box-popover {
+  z-index: 9999;
+  border: none;
+
+  .arrow {
+    border-bottom-color: transparent !important;
+  }
+
+  &.bottom  {
+    > .arrow:after {
+      left: 50%;
+    }
+  }
+
+
+  &.theme-navy {
+    background: $text-control-btn-color;
+    > .arrow:after {
+      border-bottom-color: $text-control-btn-color;
+    }
+  }
+}

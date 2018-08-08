@@ -1,0 +1,44 @@
+.sidebar {
+  width: 350px;
+  height: 100vh;
+  overflow: scroll;
+  z-index: 900;
+  background: white;
+
+  @include mobile-medium {
+    position: fixed;
+    margin-top: $header-height;
+    width: 270px;
+    z-index:1000;
+    padding-top:0;
+  }
+
+  .menu-headline {
+    height: 50px;
+    width: 90%;
+    display: block;
+    border-radius: 5px;
+    background-size: cover;
+    border: 1px solid $mainColor;
+    background-position: 0px -26px;
+    margin: 5px auto;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    padding: 0px 0px 100px 0px;
+    @include mobile-and-tablet {
+      padding: 15px 10px 50px 10px;
+    }
+    a {
+      &:hover {
+        color: $mainColor;
+      }
+    }
+  }
+
+}

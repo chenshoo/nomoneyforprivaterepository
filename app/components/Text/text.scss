@@ -1,0 +1,43 @@
+.box-text {
+
+  &.white {
+    color: white;
+  }
+
+  &.black {
+    color: black;
+  }
+
+  &.pink {
+    color: $pink;
+  }
+
+  &.brand {
+    color: $mainColor;
+  }
+
+  &.size-lg {
+    font-size: 26px;
+  }
+
+  &.size-md {
+    font-size: 22px;
+  }
+
+  &.size-sm {
+    font-size: 15px;
+  }
+
+  &.size-xs {
+    font-size: 11px;
+  }
+
+  &.size-xxs {
+    font-size: 9px;
+  }
+
+  &.inline-block {
+    display: inline-block;
+  }
+
+}

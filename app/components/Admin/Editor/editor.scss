@@ -1,0 +1,55 @@
+.box-meme-admin-editor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid black;
+  padding: 15px;
+  margin: 10px 0;
+
+  @include mobile-medium {
+    flex-direction: column;
+  }
+
+  &.saved {
+    background: darken($main-bg, 15%);
+  }
+
+  select {
+    width: 100%;
+  }
+
+  .form-container {
+    display:flex;
+    flex-direction: column;
+
+    @include mobile-medium {
+      width: 100%;
+    }
+
+    textarea {
+      height: 100%;
+      @include mobile-medium {
+        width: 100%;
+        margin: 20px 0;
+      }
+    }
+
+
+    h4 {
+      width: 200px;
+    }
+
+
+  }
+
+  .utils {
+
+    @include mobile-medium {
+      width: 100%;
+    }
+
+  }
+
+
+}

@@ -1,0 +1,40 @@
+.menu-item{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  min-height:50px;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0, 0.1);
+  font-weight: 500;
+  padding: 5px 22px;
+
+  &:hover{
+    border-bottom: 1px solid $mainColor;
+  }
+
+  &:active {
+    background: darken($white, 3%);
+  }
+
+  &.active{
+    background: transparentize($mainColor, 0.4);
+    color: white;
+    border-radius: 4px;
+    border-color: transparent;
+  }
+
+  .box-title {
+    @include desktop-small {
+      font-size: 16px;
+    }
+  }
+
+  span{
+    font-size:16px;
+    color: $mainColor;
+    &:hover{
+      color: $mainColor !important;
+    }
+  }
+
+}

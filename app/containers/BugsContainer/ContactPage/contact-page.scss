@@ -1,0 +1,15 @@
+.box-contact-page {
+  color: white;
+  padding: 70px;
+  min-height:400px;
+  z-index: 9998 !important;
+
+  @include mobile-medium {
+    padding: 0;
+  }
+
+  .modal-content {
+    z-index: 9998;
+  }
+
+}

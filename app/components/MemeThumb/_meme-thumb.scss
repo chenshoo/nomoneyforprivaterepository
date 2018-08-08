@@ -1,0 +1,197 @@
+
+.meme-thumb{
+  position:relative;
+  cursor:pointer;
+  float: left;
+
+  width: 25%;
+  height: 130px;
+
+  @include mobile-medium {
+    width: 33%;
+    height: 80px;
+  }
+
+  &.theme-full-width {
+      width: 100%;
+      @include mobile-medium {
+        width: 100%;
+      }
+  }
+
+  &.marked-in-collage {
+
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+    }
+
+    .in-collage-badge {
+      position: absolute;
+      right: 05px;
+      top: 5px;
+      z-index: 802;
+    }
+
+  }
+
+  .masonry & {
+    flex: auto;
+    height: 180px;
+    min-width: 130px;
+    margin: 0 8px 8px 0; /* Some gutter */
+
+    &:nth-child(4n+1){
+      width: 140px;
+    }
+    &:nth-child(4n+2){
+      width: 200px;
+    }
+    &:nth-child(4n+3){
+      width: 130px;
+    }
+    &:nth-child(4n+4){
+      width: 250px;
+    }
+
+    @include mobile-medium {
+      width: 33%;
+      height: 120px;
+
+      min-width: 100px;
+      margin: 0 5px 5px 0; /* Some gutter */
+
+      &:nth-child(4n+1){
+        width: 30px;
+      }
+      &:nth-child(4n+2){
+        width: 85px;
+      }
+      &:nth-child(4n+3){
+        width: 60px;
+      }
+      &:nth-child(4n+4){
+        width: 130px;
+      }
+    }
+
+  }
+
+  .like-heart {
+    position : absolute;
+    right: 5px;
+    top: 5px;
+  }
+
+  .rating-crown{
+    background :rgba(0,0,0, 0.5);
+    color: white;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 25px;
+    height: 25px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 200px;
+    font-size: 8px;
+    flex-direction: column;
+
+    @include mobile-medium {
+      left: 3px;
+      width:18px;
+      height: 18px;
+      font-size: 10px;
+
+    }
+
+    .crown {
+      position: absolute;
+      top: -10px;
+      width:20px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include mobile-medium {
+        width: 15px;
+      }
+    }
+
+  }
+
+  @include mobile-medium{
+    width:33.333333333333%;
+  }
+
+  &:hover{
+    .meme-thumb__overlay{
+      opacity : 1;
+
+      .description {
+        display: block;
+      }
+    }
+
+    .like-heart {
+      &.outside {
+        display: none;
+      }
+    }
+
+  }
+
+  .meme-thumb__img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+  }
+  .meme-thumb__overlay{
+    opacity:0;
+    position:absolute;
+    left: 0;
+    top : 0;
+    width:100%;
+    height: 100%;
+    transition :0.4s;
+    background: rgba(0,0,0,0.7);
+    z-index: 500;
+
+
+    .description{
+      color: white;
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      padding: 8px;
+      text-transform: capitalize;
+      bottom: 0;
+      font-size: 12px;
+      display: none;
+
+
+      @include mobile-medium{
+        display: block;
+        font-size: 10px;
+      }
+
+    }
+
+  }
+
+
+
+
+}
+
+

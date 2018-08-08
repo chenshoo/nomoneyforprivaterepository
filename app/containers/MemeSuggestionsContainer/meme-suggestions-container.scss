@@ -1,0 +1,42 @@
+.box-meme-suggestions-container {
+  border: 1px solid #8d8d8d;
+  border-radius: 5px;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px 10px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  @include mobile-medium {
+    width: 100%;
+  }
+
+  &.fetching {
+    height: 100px;
+    @include skeleton-animation(#ececec);
+    background: #ececec;
+
+    justify-content: center;
+    align-items: center;
+
+    .box-title {
+      z-index: 9999;
+      color: $mainColor;
+      direction: rtl;
+    }
+  }
+
+  .box-label {
+    position: absolute !important;
+    top: -13px;
+    right: 26px;
+    z-index: 888;
+
+    @include mobile-medium {
+      top: -10px;
+      right: 5px;
+    }
+  }
+}

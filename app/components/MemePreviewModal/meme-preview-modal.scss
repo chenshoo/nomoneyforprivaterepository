@@ -1,0 +1,28 @@
+.box-meme-preview-modal {
+
+  .image-loader {
+    height: 300px;
+    position: relative;
+
+    .box-activity-indicator {
+      position: absolute;
+      top: 50%;
+      left: calc(50% - 22px);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  img {
+    margin-top: 100px;
+    max-height: 300px;
+
+    &.loading {
+      height: 1px;
+      margin: 0;
+    }
+  }
+
+  .labels-container {
+    justify-content:center;
+  }
+}

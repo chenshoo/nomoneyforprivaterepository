@@ -1,0 +1,61 @@
+
+.box-cta-button {
+  transition: 0.2s;
+  cursor: pointer;
+  height: 60px;
+  font-family: $openSansHebrew;
+  align-items: center;
+  -webkit-appearance: none !important;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+
+  &.space-between {
+    justify-content: space-between;
+  }
+
+  &.btn-lg {
+    height: 70px;
+  }
+
+  &.btn-block+.btn-block {
+    margin-top: inherit;
+  }
+
+
+  // themes
+
+  &.btn-brand {
+    background: $mainColor;
+    border: 2px solid $white;
+    border-radius: 6px;
+    color: white;
+
+    &:hover {
+      background: lighten($mainColor, 3%);
+    }
+
+    &:active {
+      background: $mainColor;
+    }
+  }
+
+  &.btn-brand-gray-border {
+    background: $mainColor;
+    color: $white;
+    border: 2px solid $gray-background;
+
+    &:hover {
+      background: lighten($mainColor, 3%);
+    }
+
+    &:active {
+      background: $mainColor;
+    }
+  }
+
+}
+
+
+

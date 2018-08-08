@@ -1,0 +1,78 @@
+
+
+$text-control-btn-color : #637DCF;
+$text-control-focused-border-color: darken($text-control-btn-color, 40%);
+$text-control-color-lighten: lighten($text-control-btn-color, 20%);
+
+.box-meme-text-field  {
+
+  border: 2px solid $text-control-btn-color;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden;
+
+  transition: 0.3s;
+
+  &.focused {
+    border: 2px solid $text-control-focused-border-color;
+  }
+
+  margin-bottom: 10px;
+
+  .box-form-control {
+
+    border:none;
+
+    @include mobile-medium {
+      height: 50px;
+    }
+
+    &:focus,
+    &:active {
+      border: none !important;
+    }
+  }
+
+
+  .text-control__btn{
+    flex-grow: 1;
+    //border-right: 1px solid darken($text-control-btn-color,3%);
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    background: transparent;
+    cursor:pointer;
+    border-top: 2px solid $text-control-btn-color;
+    border-left: 2px solid $text-control-btn-color;
+    border-bottom: none;
+    color: $text-control-btn-color !important;
+
+    &:first-child {
+      border-left: none;
+    }
+
+    &.active {
+      background : darken($text-control-btn-color, 4%);
+      color: $text-control-color-lighten !important;
+    }
+
+    &.black {
+      color: black !important;
+    }
+
+    &:hover{
+      background : darken($text-control-btn-color, 10%);
+      color: $text-control-color-lighten !important;
+    }
+    &:active{
+      background : darken($text-control-btn-color, 20%);
+      color: $text-control-color-lighten !important;
+    }
+  }
+
+
+
+}

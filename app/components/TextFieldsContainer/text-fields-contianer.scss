@@ -1,0 +1,11 @@
+.text-fields-container {
+
+  @include mobile-medium {
+    position: relative;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+}

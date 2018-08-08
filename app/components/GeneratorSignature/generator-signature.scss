@@ -1,0 +1,28 @@
+.box-generator-signature {
+
+  color: $black;
+  margin-top: 60px;
+
+  @include mobile-medium{
+    margin: 0 auto;
+    max-width: 80%;
+    position:static;
+  }
+
+  h4{
+
+    @include mobile-medium{
+      font-size:13px;
+      line-height:1.3;
+    }
+
+  }
+
+  p{
+
+    @include mobile-medium{
+      font-size:9px;
+    }
+
+  }
+}
